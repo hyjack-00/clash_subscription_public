@@ -21,7 +21,7 @@ flowchart TB
 ## 名称
 
 - **上游订阅**：供应商提供的一个或多个私密链接。
-- **下游订阅密钥**：用于解密最终订阅，后台 Secret 名为 `SUBSCRIPTION_KEY`。
+- **下游订阅密钥**：用于解密最终订阅，后台推荐 Secret 名为 `DOWNSTREAM_SUB_KEY`（兼容旧名 `SUBSCRIPTION_KEY`）。
 - **下游订阅地址**：`https://clash-subscription-private.hyjack285.workers.dev/s/<下游订阅密钥>`，填写到 Clash；完整链接相当于密码。
 
 ## 管理入口
