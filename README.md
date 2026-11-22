@@ -1,10 +1,12 @@
 # Clash 订阅管理（公开展示）
 
-[查看展示页](https://hyjack-00.github.io/clash_subscription_public/) · [查看分组 Prompt](prompt.md) · [后台管理与操作说明](https://github.com/hyjack-00/clash_subscription_private)（仅仓库授权用户）
+[打开展示页](https://hyjack-00.github.io/clash_subscription_public/)
+
+## 流程与名词
 
 ```mermaid
 flowchart TB
-  A[私有：多个上游订阅与规则] --> B[私有：GitHub Actions 合并、重构并加密]
+  A[私有：上游订阅与规则] --> B[私有：GitHub Actions 合并、重构并加密]
   B --> C[公开：GitHub 仓库与 Pages 展示]
   C --> D[Cloudflare Worker：解密并提供下游订阅]
   D --> E[Clash 客户端]
@@ -18,17 +20,15 @@ flowchart TB
   class E client;
 ```
 
-## 名称
-
 - **上游订阅**：供应商提供的一个或多个私密链接。
-- **下游订阅密钥**：用于解密最终订阅，后台推荐 Secret 名为 `DOWNSTREAM_SUB_KEY`（兼容旧名 `SUBSCRIPTION_KEY`）。
-- **下游订阅地址**：`https://clash-subscription-private.hyjack285.workers.dev/s/<下游订阅密钥>`，填写到 Clash；完整链接相当于密码。
+- **下游订阅**：Cloudflare Worker 解密后供 Clash 读取的合并配置；完整订阅地址包含下游密钥，必须保密。
+- 蓝色代表私有仓库，绿色代表公开仓库，橙色代表 Cloudflare。
 
 ## 管理入口
 
-- **更换上游订阅**：[私有仓库 Secrets](https://github.com/hyjack-00/clash_subscription_private/settings/secrets/actions) 中更新 `UPSTREAM_SUB_URLS`（每行一个链接）；不要把订阅地址粘贴在公开网页或仓库。
-- **修改规则**：[编辑后台 Prompt](https://github.com/hyjack-00/clash_subscription_private/blob/main/config/agent_prompt.md)，提交后运行一次更新。公开 Prompt 在更新成功时同步；目前 Agent 只识别美国节点。
-- **立即刷新**：打开[更新任务](https://github.com/hyjack-00/clash_subscription_private/actions/workflows/update-subscription.yml)，点 Run workflow → 选择 `main` → Run workflow。无需手动执行时每 6 小时自动运行。
-- **搭建订阅入口**：打开 [Cloudflare](https://dash.cloudflare.com/)，按[后台 Worker 指南](https://github.com/hyjack-00/clash_subscription_private/blob/main/worker/README.md)操作。
+- **更换上游订阅**：[私有仓库 Secrets](https://github.com/hyjack-00/clash_subscription_private/settings/secrets/actions) 中更新 `UPSTREAM_SUB_URLS`，每行一个链接；不要公开链接。
+- **修改规则**：[编辑后台 Prompt](https://github.com/hyjack-00/clash_subscription_private/blob/main/config/agent_prompt.md)，提交后运行更新。当前 Agent 识别美国节点。
+- **立即刷新**：[更新任务](https://github.com/hyjack-00/clash_subscription_private/actions/workflows/update-subscription.yml) → Run workflow → 选择 `main` → Run workflow；默认每 6 小时自动运行。
+- **配置 Cloudflare**：[Cloudflare 控制台](https://dash.cloudflare.com/) · [Worker 部署说明](https://github.com/hyjack-00/clash_subscription_private/blob/main/worker/README.md)。
 
-本仓库只存加密产物和公开信息，不要提交原始订阅、节点密码或密钥。状态统计在首次更新成功后生成。添加上游后才能生成真实订阅；上游规则尚未合并。
+展示页公开上游显示名、脱敏节点名称与 Prompt；不要把订阅链接、密钥或节点凭据写进显示名称。
