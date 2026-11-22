@@ -4,7 +4,7 @@
   "us_count": 9,
   "upstreams": [
     {
-      "name": "老猫云",
+      "name": "上游 1",
       "nodes": [
         {
           "name": "剩余流量：49.52 GB"
