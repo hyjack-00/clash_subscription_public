@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-22T15:04:41Z",
+  "generated_at": "2026-11-22T15:07:38Z",
   "proxy_count": 59,
   "us_count": 9,
   "upstreams": [
@@ -7,7 +7,7 @@
       "name": "老猫云",
       "nodes": [
         {
-          "name": "剩余流量：49.53 GB"
+          "name": "剩余流量：49.52 GB"
         },
         {
           "name": "套餐到期：2027-11-22"
