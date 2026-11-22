@@ -1,320 +1,196 @@
 {
-  "generated_at": "2026-11-22T14:59:22Z",
+  "generated_at": "2026-11-22T15:04:41Z",
   "proxy_count": 59,
   "us_count": 9,
   "upstreams": [
     {
-      "name": "上游 1",
+      "name": "老猫云",
       "nodes": [
         {
-          "name": "节点 1（名称已隐藏）",
-          "type": "ANYTLS",
-          "udp": false
+          "name": "剩余流量：49.53 GB"
         },
         {
-          "name": "套餐到期：2027-11-22",
-          "type": "ANYTLS",
-          "udp": false
+          "name": "套餐到期：2027-11-22"
         },
         {
-          "name": "推荐:美国-01(如果节点不可用，请更新订阅)",
-          "type": "ANYTLS",
-          "udp": false
+          "name": "推荐:美国-01(如果节点不可用，请更新订阅)"
         },
         {
-          "name": "推荐:美国-02(如果无法更新订阅，请重新获取)",
-          "type": "ANYTLS",
-          "udp": false
+          "name": "推荐:美国-02(如果无法更新订阅，请重新获取)"
         },
         {
-          "name": "节点 5（名称已隐藏）",
-          "type": "ANYTLS",
-          "udp": false
+          "name": "推荐:美国-03 最新域名 55laomao.com"
         },
         {
-          "name": "节点 6（名称已隐藏）",
-          "type": "ANYTLS",
-          "udp": false
+          "name": "推荐:美国-04 最新域名 66laomao.com"
         },
         {
-          "name": "节点 7（名称已隐藏）",
-          "type": "ANYTLS",
-          "udp": false
+          "name": "推荐:美国-05-地址发布页 老猫.com"
         },
         {
-          "name": "推荐:美国-06",
-          "type": "ANYTLS",
-          "udp": false
+          "name": "推荐:美国-06"
         },
         {
-          "name": "推荐:美国-07",
-          "type": "ANYTLS",
-          "udp": false
+          "name": "推荐:美国-07"
         },
         {
-          "name": "推荐:美国-08",
-          "type": "ANYTLS",
-          "udp": false
+          "name": "推荐:美国-08"
         },
         {
-          "name": "推荐:美国-09",
-          "type": "ANYTLS",
-          "udp": false
+          "name": "推荐:美国-09"
         },
         {
-          "name": "推荐:美国-10",
-          "type": "ANYTLS",
-          "udp": false
+          "name": "推荐:美国-10"
         },
         {
-          "name": "香港-01",
-          "type": "ANYTLS",
-          "udp": false
+          "name": "香港-01"
         },
         {
-          "name": "香港-02",
-          "type": "ANYTLS",
-          "udp": false
+          "name": "香港-02"
         },
         {
-          "name": "香港-03",
-          "type": "ANYTLS",
-          "udp": false
+          "name": "香港-03"
         },
         {
-          "name": "香港-04",
-          "type": "ANYTLS",
-          "udp": false
+          "name": "香港-04"
         },
         {
-          "name": "香港-05",
-          "type": "ANYTLS",
-          "udp": false
+          "name": "香港-05"
         },
         {
-          "name": "香港-06",
-          "type": "ANYTLS",
-          "udp": false
+          "name": "香港-06"
         },
         {
-          "name": "香港-07",
-          "type": "ANYTLS",
-          "udp": false
+          "name": "香港-07"
         },
         {
-          "name": "香港-08",
-          "type": "ANYTLS",
-          "udp": false
+          "name": "香港-08"
         },
         {
-          "name": "香港-09",
-          "type": "ANYTLS",
-          "udp": false
+          "name": "香港-09"
         },
         {
-          "name": "香港-10",
-          "type": "ANYTLS",
-          "udp": false
+          "name": "香港-10"
         },
         {
-          "name": "香港-11",
-          "type": "ANYTLS",
-          "udp": false
+          "name": "香港-11"
         },
         {
-          "name": "香港-12",
-          "type": "ANYTLS",
-          "udp": false
+          "name": "香港-12"
         },
         {
-          "name": "香港-13",
-          "type": "ANYTLS",
-          "udp": false
+          "name": "香港-13"
         },
         {
-          "name": "香港-14",
-          "type": "ANYTLS",
-          "udp": false
+          "name": "香港-14"
         },
         {
-          "name": "香港-15",
-          "type": "ANYTLS",
-          "udp": false
+          "name": "香港-15"
         },
         {
-          "name": "香港-16",
-          "type": "ANYTLS",
-          "udp": false
+          "name": "香港-16"
         },
         {
-          "name": "香港-17",
-          "type": "ANYTLS",
-          "udp": false
+          "name": "香港-17"
         },
         {
-          "name": "香港-18",
-          "type": "ANYTLS",
-          "udp": false
+          "name": "香港-18"
         },
         {
-          "name": "香港-19",
-          "type": "ANYTLS",
-          "udp": false
+          "name": "香港-19"
         },
         {
-          "name": "香港-20",
-          "type": "ANYTLS",
-          "udp": false
+          "name": "香港-20"
         },
         {
-          "name": "日本-01",
-          "type": "ANYTLS",
-          "udp": false
+          "name": "日本-01"
         },
         {
-          "name": "日本-02",
-          "type": "ANYTLS",
-          "udp": false
+          "name": "日本-02"
         },
         {
-          "name": "日本-03",
-          "type": "ANYTLS",
-          "udp": false
+          "name": "日本-03"
         },
         {
-          "name": "日本-04",
-          "type": "ANYTLS",
-          "udp": false
+          "name": "日本-04"
         },
         {
-          "name": "日本-05",
-          "type": "ANYTLS",
-          "udp": false
+          "name": "日本-05"
         },
         {
-          "name": "日本-06",
-          "type": "ANYTLS",
-          "udp": false
+          "name": "日本-06"
         },
         {
-          "name": "日本-07",
-          "type": "ANYTLS",
-          "udp": false
+          "name": "日本-07"
         },
         {
-          "name": "日本-08",
-          "type": "ANYTLS",
-          "udp": false
+          "name": "日本-08"
         },
         {
-          "name": "日本-09",
-          "type": "ANYTLS",
-          "udp": false
+          "name": "日本-09"
         },
         {
-          "name": "日本-10",
-          "type": "ANYTLS",
-          "udp": false
+          "name": "日本-10"
         },
         {
-          "name": "新加坡-01",
-          "type": "ANYTLS",
-          "udp": false
+          "name": "新加坡-01"
         },
         {
-          "name": "新加坡-02",
-          "type": "ANYTLS",
-          "udp": false
+          "name": "新加坡-02"
         },
         {
-          "name": "新加坡-03",
-          "type": "ANYTLS",
-          "udp": false
+          "name": "新加坡-03"
         },
         {
-          "name": "新加坡-04",
-          "type": "ANYTLS",
-          "udp": false
+          "name": "新加坡-04"
         },
         {
-          "name": "新加坡-05",
-          "type": "ANYTLS",
-          "udp": false
+          "name": "新加坡-05"
         },
         {
-          "name": "新加坡-06",
-          "type": "ANYTLS",
-          "udp": false
+          "name": "新加坡-06"
         },
         {
-          "name": "新加坡-07",
-          "type": "ANYTLS",
-          "udp": false
+          "name": "新加坡-07"
         },
         {
-          "name": "新加坡-08",
-          "type": "ANYTLS",
-          "udp": false
+          "name": "新加坡-08"
         },
         {
-          "name": "新加坡-09",
-          "type": "ANYTLS",
-          "udp": false
+          "name": "新加坡-09"
         },
         {
-          "name": "新加坡-10",
-          "type": "ANYTLS",
-          "udp": false
+          "name": "新加坡-10"
         },
         {
-          "name": "台湾-01",
-          "type": "ANYTLS",
-          "udp": false
+          "name": "台湾-01"
         },
         {
-          "name": "台湾-02",
-          "type": "ANYTLS",
-          "udp": false
+          "name": "台湾-02"
         },
         {
-          "name": "台湾-03",
-          "type": "ANYTLS",
-          "udp": false
+          "name": "台湾-03"
         },
         {
-          "name": "台湾-04",
-          "type": "ANYTLS",
-          "udp": false
+          "name": "台湾-04"
         },
         {
-          "name": "台湾-05",
-          "type": "ANYTLS",
-          "udp": false
+          "name": "台湾-05"
         },
         {
-          "name": "台湾-06",
-          "type": "ANYTLS",
-          "udp": false
+          "name": "台湾-06"
         },
         {
-          "name": "台湾-07",
-          "type": "ANYTLS",
-          "udp": false
+          "name": "台湾-07"
         },
         {
-          "name": "台湾-08",
-          "type": "ANYTLS",
-          "udp": false
+          "name": "台湾-08"
         },
         {
-          "name": "台湾-09",
-          "type": "ANYTLS",
-          "udp": false
+          "name": "台湾-09"
         },
         {
-          "name": "台湾-10",
-          "type": "ANYTLS",
-          "udp": false
+          "name": "台湾-10"
         }
       ]
     }
