@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-22T19:28:06Z",
+  "generated_at": "2026-11-22T23:35:33Z",
   "proxy_count": 59,
   "us_count": 9,
   "upstreams": [
@@ -7,7 +7,7 @@
       "name": "上游 1",
       "nodes": [
         {
-          "name": "剩余流量：47.73 GB"
+          "name": "剩余流量：46.36 GB"
         },
         {
           "name": "距离下次重置剩余：29 天"
