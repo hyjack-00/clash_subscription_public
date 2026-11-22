@@ -27,7 +27,7 @@ flowchart TB
 ## 管理入口
 
 - **更换上游订阅**：[私有仓库 Secrets](https://github.com/hyjack-00/clash_subscription_private/settings/secrets/actions) 中更新 `UPSTREAM_SUB_URLS`，每行一个链接；不要公开链接。
-- **修改规则**：[编辑后台 Prompt](https://github.com/hyjack-00/clash_subscription_private/blob/main/config/agent_prompt.md)，提交后运行更新。当前 Agent 识别美国节点。
+- **修改规则**：[编辑后台 Prompt](https://github.com/hyjack-00/clash_subscription_private/blob/main/config/agent_prompt.md)，提交后运行更新。Agent 逐个判断美国、香港或其他地区；配置只生成美国、香港和通用三个组。
 - **立即刷新**：[更新任务](https://github.com/hyjack-00/clash_subscription_private/actions/workflows/update-subscription.yml) → Run workflow → 选择 `main` → Run workflow；默认每 6 小时自动运行。
 - **配置 Cloudflare**：[Cloudflare 控制台](https://dash.cloudflare.com/) · [Worker 部署说明](https://github.com/hyjack-00/clash_subscription_private/blob/main/worker/README.md)。
 
