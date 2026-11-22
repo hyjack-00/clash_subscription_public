@@ -1,17 +1,17 @@
 <!doctype html>
 <html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Clash 订阅管理</title><style>
-body{font:16px/1.65 system-ui,sans-serif;background:#f5f7fb;color:#17243b;margin:0}main{max-width:840px;margin:auto;padding:32px 20px}h1{margin-bottom:4px}section{background:white;border:1px solid #dce3ee;border-radius:12px;padding:20px;margin:18px 0}a{color:#1954a7}code,pre{background:#f0f3f8;border-radius:4px;padding:2px 5px}pre{white-space:pre-wrap;overflow-wrap:anywhere}.flow{display:flex;flex-wrap:wrap;gap:8px}.flow span{background:#eaf1fc;border-radius:8px;padding:8px 12px}.muted{color:#52627a}
+body{font:16px/1.65 system-ui,sans-serif;background:#f5f7fb;color:#17243b;margin:0}main{max-width:840px;margin:auto;padding:32px 20px}h1{margin-bottom:4px}section{background:white;border:1px solid #dce3ee;border-radius:12px;padding:20px;margin:18px 0}a{color:#1954a7}code,pre{background:#f0f3f8;border-radius:4px;padding:2px 5px}pre{white-space:pre-wrap;overflow-wrap:anywhere}.flow{display:grid;gap:8px}.flow span{border-radius:8px;padding:10px 12px}.flow .private{background:#e9efff;border-left:4px solid #526ac2}.flow .public{background:#e4f6eb;border-left:4px solid #39835b}.flow .cloud{background:#fff0df;border-left:4px solid #d47a18}.flow .client{background:#f1f1f1;border-left:4px solid #777}.muted{color:#52627a}
 </style></head><body><main><h1>Clash 订阅管理</h1><p class="muted">公开只读页面。原始链接、密钥和订阅明文不会展示在这里。</p>
-<section><h2>流程</h2><div class="flow"><span>私有订阅与规则</span><span>→ 定时 / 手动更新</span><span>→ Claude Code 识别美国节点</span><span>→ 加密发布</span><span>→ Worker 解密</span><span>→ Clash 订阅</span></div></section>
+<section><h2>流程</h2><div class="flow"><span class="private">私有：多个上游订阅与规则</span><span class="private">↓ GitHub Actions 合并、重构并加密</span><span class="public">↓ 公开：GitHub 仓库与 Pages 展示</span><span class="cloud">↓ Cloudflare Worker 解密并提供下游订阅</span><span class="client">↓ Clash 客户端</span></div><p class="muted">蓝色：私有；绿色：公开；橙色：Cloudflare。</p><p>上游订阅是供应商提供的私密链接。下游订阅地址是 <code>https://clash-subscription-private.hyjack285.workers.dev/s/下游订阅密钥</code>，填写到 Clash；完整链接相当于密码。</p></section>
 <section><h2>当前状态</h2><p id="status">正在读取；首次成功更新前可能还没有状态。</p><p class="muted">此处仅展示成功发布的统计，无法单独反映最近一次失败；请到 Actions 查看运行记录。</p></section>
 <section><h2>重构规则 Prompt</h2><pre id="prompt">正在读取…</pre><p><a href="prompt.md">查看原始文件</a></p></section>
 <section><h2>管理员操作</h2><ul>
-<li><a href="https://github.com/hyjack-00/clash_subscription_private/settings/secrets/actions">添加或替换订阅地址和密钥（私有 Secrets）</a></li>
+<li><a href="https://github.com/hyjack-00/clash_subscription_private/settings/secrets/actions">添加或替换上游订阅链接（私有 Secrets：UPSTREAM_SUB_URLS，每行一个）</a></li>
 <li><a href="https://github.com/hyjack-00/clash_subscription_private/blob/main/config/agent_prompt.md">修改后台 Prompt</a>：点击铅笔编辑并提交。</li>
 <li><a href="https://github.com/hyjack-00/clash_subscription_private/actions/workflows/update-subscription.yml">立即更新或查看运行记录</a>：点击 Run workflow，选择 main，再确认。</li>
 <li><a href="https://dash.cloudflare.com/">Cloudflare 控制台</a> · <a href="https://github.com/hyjack-00/clash_subscription_private/blob/main/worker/README.md">Worker 部署指南</a></li>
 <li><a href="https://github.com/hyjack-00/clash_subscription_private">完整后台说明</a>（仅授权用户可访问）</li>
-</ul><p class="muted">管理入口需要 GitHub 登录及私有仓库权限。当前只支持一个来源和美国节点分组；不要将真实订阅链接或密钥提交到任何公开位置。</p></section></main>
+</ul><p class="muted">管理入口需要 GitHub 登录及私有仓库权限。当前支持多个上游的节点合并与美国节点分组；不要将真实订阅链接或密钥提交到任何公开位置。</p></section></main>
 <script>
 fetch('prompt.md',{cache:'no-store'}).then(r=>{if(!r.ok)throw Error();return r.text()}).then(t=>document.querySelector('#prompt').textContent=t).catch(()=>document.querySelector('#prompt').textContent='暂无规则数据');
 fetch('dist/status.json',{cache:'no-store'}).then(r=>{if(!r.ok)throw Error();return r.json()}).then(x=>document.querySelector('#status').textContent=`最近成功更新：${x.generated_at}；节点总数：${x.proxy_count}；美国节点：${x.us_count}。`).catch(()=>document.querySelector('#status').textContent='尚无成功发布的状态数据。');
